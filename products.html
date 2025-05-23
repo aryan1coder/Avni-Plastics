@@ -1,208 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products - Avni Plastics</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avni Plastics - Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #2c3e50, #bdc3c7);
+      color: #1c1c1c;
+      line-height: 1.6;
+      min-height: 100vh;
+      padding-bottom: 100px;
+    }
+    header {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    main {
+      padding: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin-top: 2rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .product {
+      background: rgba(255,255,255,0.8);
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      height: 180px;
+      object-fit: cover;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: #25D366;
+      padding: 15px;
+      border-radius: 50%;
+      z-index: 1000;
+    }
+    .whatsapp img {
+      width: 30px;
+      height: 30px;
+    }
+  </style>
 </head>
 <body>
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/yournumber" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="images/logo.png" alt="Avni Plastics Logo">
-            </div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html" class="active">Products</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </header>
-
-    <!-- Products Hero -->
-    <section class="page-hero">
-        <div class="container">
-            <h1>Our Products</h1>
-            <p>High-quality plastic bottles for various industries</p>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section class="products-page">
-        <div class="container">
-            <div class="products-filter">
-                <button class="filter-btn active" data-filter="all">All Products</button>
-                <button class="filter-btn" data-filter="pet">PET Bottles</button>
-                <button class="filter-btn" data-filter="hdpe">HDPE Bottles</button>
-                <button class="filter-btn" data-filter="cosmetic">Cosmetic Containers</button>
-            </div>
-            <div class="products-grid">
-                <!-- Product 1 -->
-                <div class="product-card" data-category="pet">
-                    <img src="images/product1.jpg" alt="PET Bottle 500ml">
-                    <h3>PET Bottle 500ml</h3>
-                    <p>Clear PET bottle with 28mm neck finish. Ideal for water and beverages.</p>
-                    <div class="product-specs">
-                        <span><strong>Material:</strong> PET</span>
-                        <span><strong>Capacity:</strong> 500ml</span>
-                    </div>
-                </div>
-                
-                <!-- Product 2 -->
-                <div class="product-card" data-category="hdpe">
-                    <img src="images/product2.jpg" alt="HDPE Bottle 1L">
-                    <h3>HDPE Bottle 1L</h3>
-                    <p>White HDPE bottle with 38mm screw cap. Chemical resistant.</p>
-                    <div class="product-specs">
-                        <span><strong>Material:</strong> HDPE</span>
-                        <span><strong>Capacity:</strong> 1 Liter</span>
-                    </div>
-                </div>
-                
-                <!-- Product 3 -->
-                <div class="product-card" data-category="cosmetic">
-                    <img src="images/product3.jpg" alt="Cosmetic Jar 250ml">
-                    <h3>Cosmetic Jar 250ml</h3>
-                    <p>White PP jar with black lid. Perfect for creams and ointments.</p>
-                    <div class="product-specs">
-                        <span><strong>Material:</strong> PP</span>
-                        <span><strong>Capacity:</strong> 250ml</span>
-                    </div>
-                </div>
-                
-                <!-- Product 4 -->
-                <div class="product-card" data-category="pet">
-                    <img src="images/product4.jpg" alt="PET Bottle 1L">
-                    <h3>PET Bottle 1L</h3>
-                    <p>Clear PET bottle with sports cap. Ideal for juices and energy drinks.</p>
-                    <div class="product-specs">
-                        <span><strong>Material:</strong> PET</span>
-                        <span><strong>Capacity:</strong> 1 Liter</span>
-                    </div>
-                </div>
-                
-                <!-- Product 5 -->
-                <div class="product-card" data-category="hdpe">
-                    <img src="images/product5.jpg" alt="HDPE Jerry Can 5L">
-                    <h3>HDPE Jerry Can 5L</h3>
-                    <p>Blue HDPE jerry can with handle. Perfect for industrial liquids.</p>
-                    <div class="product-specs">
-                        <span><strong>Material:</strong> HDPE</span>
-                        <span><strong>Capacity:</strong> 5 Liters</span>
-                    </div>
-                </div>
-                
-                <!-- Product 6 -->
-                <div class="product-card" data-category="cosmetic">
-                    <img src="images/product6.jpg" alt="Airless Pump Bottle 100ml">
-                    <h3>Airless Pump Bottle 100ml</h3>
-                    <p>Premium airless pump bottle for serums and lotions.</p>
-                    <div class="product-specs">
-                        <span><strong>Material:</strong> PET/PP</span>
-                        <span><strong>Capacity:</strong> 100ml</span>
-                    </div>
-                </div>
-                
-                <!-- Product 7 -->
-                <div class="product-card" data-category="pet">
-                    <img src="images/product7.jpg" alt="PET Bottle 330ml">
-                    <h3>PET Bottle 330ml</h3>
-                    <p>Clear PET bottle with standard neck. Suitable for carbonated drinks.</p>
-                    <div class="product-specs">
-                        <span><strong>Material:</strong> PET</span>
-                        <span><strong>Capacity:</strong> 330ml</span>
-                    </div>
-                </div>
-                
-                <!-- Product 8 -->
-                <div class="product-card" data-category="hdpe">
-                    <img src="images/product8.jpg" alt="HDPE Bottle 500ml">
-                    <h3>HDPE Bottle 500ml</h3>
-                    <p>Natural HDPE bottle with child-resistant cap.</p>
-                    <div class="product-specs">
-                        <span><strong>Material:</strong> HDPE</span>
-                        <span><strong>Capacity:</strong> 500ml</span>
-                    </div>
-                </div>
-                
-                <!-- Product 9 -->
-                <div class="product-card" data-category="cosmetic">
-                    <img src="images/product9.jpg" alt="Squeeze Tube 75ml">
-                    <h3>Squeeze Tube 75ml</h3>
-                    <p>Laminate squeeze tube with flip-top cap. For gels and pastes.</p>
-                    <div class="product-specs">
-                        <span><strong>Material:</strong> Laminate</span>
-                        <span><strong>Capacity:</strong> 75ml</span>
-                    </div>
-                </div>
-                
-                <!-- Product 10 -->
-                <div class="product-card" data-category="pet">
-                    <img src="images/product10.jpg" alt="PET Wide Mouth Jar 250ml">
-                    <h3>PET Wide Mouth Jar 250ml</h3>
-                    <p>Clear PET jar with wide mouth opening. Ideal for food products.</p>
-                    <div class="product-specs">
-                        <span><strong>Material:</strong> PET</span>
-                        <span><strong>Capacity:</strong> 250ml</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bulk Order CTA -->
-    <section class="bulk-order">
-        <div class="container">
-            <h2>Looking for Bulk Quantities?</h2>
-            <p>We specialize in manufacturing high-quality plastic bottles in bulk quantities with competitive pricing.</p>
-            <a href="contact.html" class="btn">Request a Quote</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Avni Plastics</h3>
-                    <p>Leading manufacturer of high-quality plastic bottles since 2010. We pride ourselves on quality, reliability, and customer satisfaction.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Industrial Area, City, Country</p>
-                    <p><i class="fas fa-phone"></i> +123 456 7890</p>
-                    <p><i class="fas fa-envelope"></i> info@avniplastics.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Avni Plastics. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
+  <header>Avni Plastics - Products</header>
+  <main><h2>Our Products</h2><div class="product-grid"><div class="product"><img src="images/bottle1.jpg" alt="Bottle 1"><p>Product 1</p></div><div class="product"><img src="images/bottle2.jpg" alt="Bottle 2"><p>Product 2</p></div><div class="product"><img src="images/bottle3.jpg" alt="Bottle 3"><p>Product 3</p></div><div class="product"><img src="images/bottle4.jpg" alt="Bottle 4"><p>Product 4</p></div><div class="product"><img src="images/bottle5.jpg" alt="Bottle 5"><p>Product 5</p></div><div class="product"><img src="images/bottle6.jpg" alt="Bottle 6"><p>Product 6</p></div><div class="product"><img src="images/bottle7.jpg" alt="Bottle 7"><p>Product 7</p></div><div class="product"><img src="images/bottle8.jpg" alt="Bottle 8"><p>Product 8</p></div><div class="product"><img src="images/bottle9.jpg" alt="Bottle 9"><p>Product 9</p></div><div class="product"><img src="images/bottle10.jpg" alt="Bottle 10"><p>Product 10</p></div></div></main>
+  <footer>Contact: 9993041244 | Email: saxenaaryan305@gmail.com</footer>
+  <a href="https://wa.me/919993041244" class="whatsapp" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" />
+  </a>
 </body>
 </html>
